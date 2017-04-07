@@ -1,0 +1,16 @@
+{
+    "haxe.displayConfigurations": [["-cp", "src", "-js", "main.js"],["build.hxml"]],
+    "haxe.displayServer": { // configuration for starting haxe completion server itself
+        "haxePath": "haxe", // path to the executable (default: `haxe`)
+        "arguments": ["-v"], // arguments before --wait (-v is useful for debugging)
+        "env": { // environment variables for the completion server
+            "HAXE_STD_PATH": "/usr/local/lib/haxe/std"
+        },
+
+        // platform-specific overrides of the keys above
+        // they will be merged into the default configuration
+        "windows": {},
+        "linux": {},
+        "osx": {}
+    }
+}
