@@ -1,15 +1,20 @@
 import inflector.*;
+import haxe.unit.*;
 
-using inflector.InflectorStringExtensions;
+//TODO: Test other methods
+//TODO: Create static extensions
 
-//List, Dictionary
-//https://haxe.org/manual/std-ds.html
-
-typedef Foo = {x:String, y:String}
-
-class Test {
+class Test extends TestCase {
     public static function main() {
-        trace("asd".pluralize());
-//        trace(Inflections.instance());
+        var r = new haxe.unit.TestRunner();
+        r.add(new Test());
+        r.run();
+   }
+
+    function test() {
+       assertEquals(Inflections.pluralize('person'), 'people');
+       assertEquals(Inflections.pluralize('car'), 'cars');
+       assertEquals(Inflections.singularize('cars'), 'car');
+       assertEquals(Inflections.singularize('people'), 'person');
     }
 }

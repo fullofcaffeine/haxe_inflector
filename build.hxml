@@ -1,4 +1,16 @@
 -cp src
 -lib thx.core
+inflector.Inflections
 -main Test
 -js test.js
+--next
+-cp src
+-lib thx.core
+inflector.Inflections
+-js ts_source/inflector.js
+--next
+-cp src
+-lib thx.core
+inflector.Inflections
+-main Test
+-cs test
